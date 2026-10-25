@@ -1,0 +1,192 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script src="js/student-access.js"></script>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | UniFit</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+ 
+ </nav>
+
+    </header>
+
+
+    <!-- PROFILE PAGE -->
+    <main>
+
+        <section class="section">
+
+            <div class="profile-container">
+
+                <div class="profile-header">
+
+                    <div class="profile-avatar">
+                        U
+                    </div>
+
+                    <div>
+
+                        <p class="eyebrow">
+                            My Account
+                        </p>
+
+                        <h1 id="profileFullName">
+                            Student Profile
+                        </h1>
+
+                        <p>
+                            Manage your UniFit account information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROFILE INFORMATION -->
+                <div class="profile-card">
+
+                    <h2>
+                        Personal Information
+                    </h2>
+
+
+                    <div class="profile-info-grid">
+
+                        <div class="profile-info-item">
+
+                            <span>
+                                Full Name
+                            </span>
+
+                            <strong id="profileName">
+                                Not Available
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-info-item">
+
+                            <span>
+                                Student Number
+                            </span>
+
+                            <strong id="profileStudentNumber">
+                                Not Available
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-info-item">
+
+                            <span>
+                                Contact Number
+                            </span>
+
+                            <strong id="profileContact">
+                                Not Available
+                            </strong>
+
+                        </div>
+
+
+                        <div class="profile-info-item">
+
+                            <span>
+                                Email Address
+                            </span>
+
+                            <strong id="profileEmail">
+                                Not Available
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-actions">
+
+                        <a
+                            href="my-orders.html"
+                            class="btn primary-btn">
+
+                            My Orders
+
+                        </a>
+
+                        <button
+                            type="button"
+                            class="btn secondary-btn"
+                            id="logoutButton">
+
+                            Logout
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/app.js?v=10"></script>
+
+    <script>
+        (async function loadStudentProfile() {
+            const showProfile = (user) => {
+                if (!user) return;
+                const firstName = String(user.firstName || '').trim();
+                const lastName = String(user.lastName || '').trim();
+                const fullName = [firstName, lastName].filter(Boolean).join(' ');
+                const values = {
+                    profileFullName: fullName || 'Student Profile',
+                    profileName: fullName,
+                    profileStudentNumber: user.studentNumber,
+                    profileContact: user.contactNumber,
+                    profileEmail: user.email
+                };
+                Object.entries(values).forEach(([id, value]) => {
+                    const element = document.getElementById(id);
+                    if (element && String(value || '').trim()) element.textContent = String(value).trim();
+                });
+            };
+
+            try {
+                const response = await fetch('/api/student-session', { cache: 'no-store' });
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.user) {
+                        localStorage.setItem('unifitCurrentUser', JSON.stringify(data.user));
+                        showProfile(data.user);
+                        return;
+                    }
+                }
+            } catch (error) {
+                // Use the last locally saved profile if the server is temporarily unavailable.
+            }
+
+            try {
+                showProfile(JSON.parse(localStorage.getItem('unifitCurrentUser') || 'null'));
+            } catch (error) {
+                // Leave the page's default placeholders if local profile data is invalid.
+            }
+        })();
+    </script>
+</body>
+
+</html>

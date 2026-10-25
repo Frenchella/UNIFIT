@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script src="js/student-access.js"></script>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>UniFit | School Uniform Shop</title>
+
+
+    <!-- =====================================================
+         TEMPORARY INTERNAL CSS
+         We will move this to style.css later.
+    ====================================================== -->
+
+    <style>
+
+        /* ===============================
+           RESET
+        =============================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Manrope", Arial, sans-serif;
+            background: #fffdf8;
+            color: #3e2723;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+
+        /* ===============================
+           HEADER
+        =============================== */
+
+        .site-header {
+            background: #3e2723;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1180px;
+            min-height: 72px;
+
+            margin: auto;
+            padding: 0 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 25px;
+        }
+
+
+        /* ===============================
+           LOGO
+        =============================== */
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            flex-shrink: 0;
+
+            color: #fffdf8;
+
+            font-family: "Lora", Georgia, serif;
+
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+
+            object-fit: contain;
+
+            border-radius: 50%;
+
+            background: #fffdf8;
+        }
+
+
+        /* ===============================
+           NAVIGATION
+        =============================== */
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+
+            gap: 22px;
+        }
+
+        .nav-links a {
+            position: relative;
+
+            display: inline-flex;
+            align-items: center;
+
+            color: #f5efe6;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #c49a6c;
+        }
+
+        .nav-links a.active::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            right: 0;
+
+            bottom: -9px;
+
+            height: 2px;
+
+            background: #c49a6c;
+        }
+
+
+        /* CART NUMBER */
+
+        .cart-count {
+            min-width: 20px;
+            height: 20px;
+
+            margin-left: 5px;
+            padding: 0 5px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #c49a6c;
+
+            color: #3e2723;
+
+            font-size: 11px;
+        }
+
+
+        /* MOBILE MENU */
+
+        .menu-toggle {
+            display: none;
+
+            padding: 8px 14px;
+
+            border: 1px solid #8d6e63;
+            border-radius: 6px;
+
+            background: #5d4037;
+
+            color: white;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+
+        /* ===============================
+           HERO
+        =============================== */
+
+        .hero {
+            min-height: 520px;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #38221e,
+                    #5d4037
+                );
+        }
+
+        .hero-container {
+            width: 100%;
+            max-width: 1180px;
+
+            margin: auto;
+            padding: 70px 25px;
+
+            display: grid;
+
+            grid-template-columns:
+                380px
+                minmax(0, 1fr);
+
+            align-items: center;
+
+            gap: 65px;
+        }
+
+
+        /* HERO LOGO */
+
+        .hero-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-logo img {
+            width: 330px;
+            height: 330px;
+
+            object-fit: contain;
+
+            border-radius: 50%;
+
+            background: #fffdf8;
+
+            box-shadow:
+                0 25px 60px
+                rgba(0, 0, 0, 0.25);
+        }
+
+
+        /* HERO CONTENT */
+
+        .eyebrow {
+            margin-bottom: 10px;
+
+            color: #c49a6c;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.8px;
+        }
+
+        .hero-content h1 {
+            max-width: 700px;
+
+            margin-bottom: 20px;
+
+            color: #fffdf8;
+
+            font-family: "Lora", Georgia, serif;
+
+            font-size: 54px;
+
+            line-height: 1.08;
+        }
+
+        .hero-content > p:not(.eyebrow) {
+            max-width: 610px;
+
+            margin-bottom: 28px;
+
+            color: #eadfd5;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+        }
+
+
+        /* ===============================
+           BUTTONS
+        =============================== */
+
+        .hero-buttons {
+            display: flex;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            min-height: 45px;
+
+            padding: 12px 22px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 7px;
+
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .primary-btn {
+            background:
+                linear-gradient(
+                    #d7ad7a,
+                    #bf8f5e
+                );
+
+            color: #2f1d18;
+        }
+
+        .primary-btn:hover {
+            background: #dfbb8b;
+        }
+
+        .secondary-btn {
+            border: 1px solid #c49a6c;
+
+            color: #fffdf8;
+        }
+
+        .secondary-btn:hover {
+            background: #fffdf8;
+
+            color: #3e2723;
+        }
+
+
+        /* ===============================
+           GENERAL SECTION
+        =============================== */
+
+        .section {
+            max-width: 1180px;
+
+            margin: auto;
+
+            padding: 70px 25px;
+        }
+
+        .section-heading {
+            margin-bottom: 35px;
+
+            display: flex;
+
+            align-items: flex-end;
+
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+        .section-heading h2 {
+            color: #3e2723;
+
+            font-family: "Lora", Georgia, serif;
+
+            font-size: 34px;
+        }
+
+        .view-all {
+            color: #795548;
+
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+
+        /* ===============================
+           FEATURED PRODUCTS
+        =============================== */
+
+        .product-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 22px;
+        }
+
+        .product-card {
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: column;
+
+            background: #ffffff;
+
+            border: 1px solid #e4d8cd;
+
+            border-radius: 9px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(62, 39, 35, 0.08);
+        }
+
+
+        /* PRODUCT IMAGE */
+
+        .product-image {
+            height: 260px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    #ffffff,
+                    #f3eee8
+                );
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+
+            padding: 20px;
+
+            object-fit: contain;
+        }
+
+
+        /* PRODUCT CONTENT */
+
+        .product-info {
+            flex: 1;
+
+            padding: 18px;
+
+            display: flex;
+
+            flex-direction: column;
+        }
+
+        .product-info h3 {
+            margin-bottom: 7px;
+
+            color: #2f1d18;
+
+            font-size: 17px;
+        }
+
+        .price {
+            margin-bottom: 4px;
+
+            color: #8b3b2d;
+
+            font-size: 19px;
+            font-weight: 800;
+        }
+
+        .sizes {
+            margin-bottom: 15px;
+
+            color: #795548;
+
+            font-size: 13px;
+        }
+
+        .product-info .btn {
+            width: 100%;
+
+            margin-top: auto;
+        }
+
+
+        /* ===============================
+           CATEGORIES
+        =============================== */
+
+        .categories-section {
+            background: #f5efe6;
+        }
+
+        .category-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 16px;
+        }
+
+        .category-card {
+            min-height: 160px;
+
+            padding: 20px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            background: #fffdf8;
+
+            border: 1px solid #dfd0c2;
+
+            border-radius: 8px;
+
+            color: #3e2723;
+        }
+
+        .category-card:hover {
+            background: #5d4037;
+
+            color: #fffdf8;
+        }
+
+        .category-code {
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #eadbc9;
+
+            color: #5d4037;
+
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .category-card h3 {
+            margin-top: 15px;
+
+            font-family: "Lora", Georgia, serif;
+
+            font-size: 17px;
+        }
+
+        .category-card p {
+            color: #795548;
+
+            font-size: 12px;
+        }
+
+        .category-card:hover p {
+            color: #fffdf8;
+        }
+
+        .category-arrow {
+            align-self: flex-end;
+
+            font-size: 18px;
+        }
+
+
+        /* ===============================
+           WHY UNIFIT
+        =============================== */
+
+        .center-heading {
+            margin-bottom: 35px;
+
+            text-align: center;
+        }
+
+        .center-heading h2 {
+            font-family: "Lora", Georgia, serif;
+
+            font-size: 32px;
+        }
+
+        .feature-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+        .feature-card {
+            padding: 28px;
+
+            border:
+                1px solid #e4d8cd;
+
+            border-top:
+                3px solid #c49a6c;
+
+            border-radius: 8px;
+
+            background: #fffdf8;
+        }
+
+        .feature-number {
+            margin-bottom: 14px;
+
+            color: #c49a6c;
+
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 8px;
+
+            font-family: "Lora", Georgia, serif;
+
+            font-size: 20px;
+        }
+
+        .feature-card p {
+            color: #795548;
+
+            font-size: 14px;
+        }
+
+
+        /* ===============================
+           FOOTER
+        =============================== */
+
+        .footer {
+            padding: 42px 25px 18px;
+
+            background: #3e2723;
+
+            color: #eadfd5;
+        }
+
+        .footer-content {
+            max-width: 1180px;
+
+            margin: auto;
+
+            padding-bottom: 28px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+        .footer h3 {
+            color: #fffdf8;
+
+            font-family: "Lora", Georgia, serif;
+
+            font-size: 22px;
+        }
+
+        .footer p {
+            color: #cbb8aa;
+
+            font-size: 13px;
+        }
+
+        .footer-links {
+            display: flex;
+
+            gap: 22px;
+        }
+
+        .footer-links a {
+            color: #d8c7ba;
+
+            font-size: 13px;
+        }
+
+        .footer-bottom {
+            max-width: 1180px;
+
+            margin: auto;
+
+            padding-top: 18px;
+
+            border-top:
+                1px solid #5d4037;
+
+            text-align: center;
+        }
+
+
+        /* ===============================
+           TABLET
+        =============================== */
+
+        @media (max-width: 1000px) {
+
+            .nav-links {
+                gap: 14px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .hero-container {
+                grid-template-columns:
+                    220px 1fr;
+
+                gap: 40px;
+            }
+
+            .hero-logo img {
+                width: 210px;
+                height: 210px;
+            }
+
+            .hero-content h1 {
+                font-size: 43px;
+            }
+
+            .product-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .category-grid {
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+        }
+
+
+        /* ===============================
+           MOBILE
+        =============================== */
+
+        @media (max-width: 760px) {
+
+            .navbar {
+                min-height: 65px;
+
+                padding: 10px 20px;
+
+                flex-wrap: wrap;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+
+                width: 100%;
+
+                padding: 15px 0;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 16px;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-container {
+                padding: 50px 20px;
+
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+            .hero-logo img {
+                width: 140px;
+                height: 140px;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .section {
+                padding: 55px 20px;
+            }
+
+            .section-heading {
+                display: block;
+
+                text-align: center;
+            }
+
+            .view-all {
+                display: inline-block;
+
+                margin-top: 12px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+        }
+
+
+        @media (max-width: 430px) {
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+<link rel="stylesheet" href="css/welcome.css">
+<script>try { if(localStorage.getItem('unifitLoggedIn')!=='true'||!localStorage.getItem('unifitCurrentUser')) document.documentElement.classList.add('welcome-mode'); } catch(e) {document.documentElement.classList.add('welcome-mode');}</script>
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+
+            <!-- UNIFIT LOGO -->
+            <a href="index.html" class="logo">
+
+                <img
+                    src="assets/images/Group 6.png"
+                    alt="UniFit Logo">
+
+                <span>
+                    UniFit
+                </span>
+
+            </a>
+
+
+
+            <!-- MOBILE MENU -->
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button">
+
+                Menu
+
+            </button>
+
+
+
+            <!-- NAVIGATION -->
+            <ul class="nav-links"
+                id="navLinks">
+
+
+                <li>
+                    <a href="index.html"
+                       class="active">
+
+                        Home
+
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="products.html">
+
+                        Products
+
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="uniform-sets.html">
+
+                        Uniform Sets
+
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="events.html">
+
+                        Sportsfest
+
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="size-guide.html">
+
+                        Size Guide
+
+                    </a>
+                </li>
+
+
+                <li>
+
+                    <a href="cart.html">
+
+                        Cart
+
+                        <span class="cart-count">
+                            0
+                        </span>
+
+                    </a>
+
+                </li>
+
+
+                <li>
+                    <a href="login.html">
+
+                        Login
+
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="profile.html">
+                    Profile
+
+                    </a>
+                </li>
+
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="hero">
+
+            <div class="hero-container">
+
+
+                <!-- LARGE UNIFIT LOGO -->
+                <div class="hero-logo">
+
+                    <img
+                        src="assets/images/Group 6.png"
+                        alt="UniFit School Uniform Shop Logo">
+
+                </div>
+
+
+
+                <!-- HERO CONTENT -->
+                <div class="hero-content">
+
+                    <p class="eyebrow">
+                        UniFit School Uniform Shop
+                    </p>
+
+
+                    <h1>
+
+                        Your School Essentials,
+                        One Click Away
+
+                    </h1>
+
+
+                    <p>
+
+                        Find school uniforms, PE uniforms,
+                        ID laces, patches, and school accessories
+                        in one convenient place.
+
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+
+                        <a
+                            href="products.html"
+                            class="btn primary-btn">
+
+                            Shop Now
+
+                        </a>
+
+
+                        <a
+                            href="#featured"
+                            class="btn secondary-btn">
+
+                            View Featured
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FEATURED PRODUCTS
+        ================================================== -->
+
+        <section
+            class="section"
+            id="featured">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        Popular Picks
+                    </p>
+
+                    <h2>
+                        Featured Products
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="products.html"
+                    class="view-all">
+
+                    View All Products →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- PRODUCT GRID -->
+            <div class="product-grid">
+
+
+                <!-- PRODUCT 1 -->
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="assets/images/mens-pink-brown-uniform-top.png"
+                            alt="Men's School Uniform">
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <h3>
+                            Men's School Uniform
+                        </h3>
+
+
+                        <p class="price">
+                            ₱450.00
+                        </p>
+
+
+                        <p class="sizes">
+                            Sizes: S, M, L, XL
+                        </p>
+
+
+                        <a
+                            href="products.html"
+                            class="btn primary-btn">
+
+                            View Product
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PRODUCT 2 -->
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="assets/images/mens-dark-brown-straight-slacks.png"
+                            alt="Men's Uniform Pants">
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <h3>
+                            Men's Uniform Pants
+                        </h3>
+
+
+                        <p class="price">
+                            ₱500.00
+                        </p>
+
+
+                        <p class="sizes">
+                            Sizes: S, M, L, XL
+                        </p>
+
+
+                        <a
+                            href="products.html"
+                            class="btn primary-btn">
+
+                            View Product
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PRODUCT 3 -->
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="assets/images/pe-top-yellow-white.png"
+                            alt="PE Uniform Top">
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <h3>
+                            PE Uniform Top
+                        </h3>
+
+
+                        <p class="price">
+                            ₱350.00
+                        </p>
+
+
+                        <p class="sizes">
+                            Sizes: S, M, L, XL
+                        </p>
+
+
+                        <a
+                            href="products.html"
+                            class="btn primary-btn">
+
+                            View Product
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PRODUCT 4 -->
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="assets/images/pe-jogger-pants-black-yellow.png"
+                            alt="PE Jogger Pants">
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <h3>
+                            PE Jogger Pants
+                        </h3>
+
+
+                        <p class="price">
+                            ₱400.00
+                        </p>
+
+
+                        <p class="sizes">
+                            Sizes: S, M, L, XL
+                        </p>
+
+
+                        <a
+                            href="products.html"
+                            class="btn primary-btn">
+
+                            View Product
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CATEGORIES
+        ================================================== -->
+
+        <section class="categories-section">
+
+            <div class="section">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            Shop By Need
+                        </p>
+
+                        <h2>
+                            Browse Categories
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="category-grid">
+
+
+                    <!-- SCHOOL UNIFORM -->
+                    <a
+                        href="products.html?category=School%20Uniform"
+                        class="category-card">
+
+                        <span class="category-code">
+                            SU
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                School Uniform
+                            </h3>
+
+                            <p>
+                                Daily school wear
+                            </p>
+
+                        </div>
+
+                        <span class="category-arrow">
+                            →
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- PE -->
+                    <a
+                        href="products.html?category=PE%20Uniform"
+                        class="category-card">
+
+                        <span class="category-code">
+                            PE
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                PE Uniform
+                            </h3>
+
+                            <p>
+                                For physical education
+                            </p>
+
+                        </div>
+
+                        <span class="category-arrow">
+                            →
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- ID -->
+                    <a
+                        href="products.html?category=ID%20Lace"
+                        class="category-card">
+
+                        <span class="category-code">
+                            ID
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                ID Lace
+                            </h3>
+
+                            <p>
+                                School identification lace
+                            </p>
+
+                        </div>
+
+                        <span class="category-arrow">
+                            →
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- PATCH -->
+                    <a
+                        href="products.html?category=Patches"
+                        class="category-card">
+
+                        <span class="category-code">
+                            PT
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Patches
+                            </h3>
+
+                            <p>
+                                School logo patches
+                            </p>
+
+                        </div>
+
+                        <span class="category-arrow">
+                            →
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- ACCESSORIES -->
+                    <a
+                        href="products.html?category=Accessories"
+                        class="category-card">
+
+                        <span class="category-code">
+                            AC
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Accessories
+                            </h3>
+
+                            <p>
+                                Belt and ribbon
+                            </p>
+
+                        </div>
+
+                        <span class="category-arrow">
+                            →
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             WHY UNIFIT
+        ================================================== -->
+
+        <section class="section">
+
+
+            <div class="center-heading">
+
+                <p class="eyebrow">
+                    Why UniFit?
+                </p>
+
+                <h2>
+                    Simple. Convenient. Reliable.
+                </h2>
+
+            </div>
+
+
+
+            <div class="feature-grid">
+
+
+                <article class="feature-card">
+
+                    <p class="feature-number">
+                        01
+                    </p>
+
+                    <h3>
+                        Easy Ordering
+                    </h3>
+
+                    <p>
+
+                        Browse products and order
+                        your school essentials without
+                        the hassle.
+
+                    </p>
+
+                </article>
+
+
+
+                <article class="feature-card">
+
+                    <p class="feature-number">
+                        02
+                    </p>
+
+                    <h3>
+                        Complete Selection
+                    </h3>
+
+                    <p>
+
+                        Find uniforms, PE wear,
+                        ID laces, patches, and
+                        accessories in one place.
+
+                    </p>
+
+                </article>
+
+
+
+                <article class="feature-card">
+
+                    <p class="feature-number">
+                        03
+                    </p>
+
+                    <h3>
+                        Made for Students
+                    </h3>
+
+                    <p>
+
+                        Designed to make buying
+                        school apparel easier and
+                        more convenient.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+
+        <div class="footer-content">
+
+
+            <div>
+
+                <h3>
+                    UniFit
+                </h3>
+
+                <p>
+                    Your School Essentials,
+                    One Click Away.
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 UniFit.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         MOBILE MENU SCRIPT
+    ====================================================== -->
+
+    <script>
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        menuToggle.addEventListener(
+            "click",
+            function () {
+
+                navLinks.classList.toggle("show");
+
+            }
+        );
+
+    </script>
+
+
+<script src="js/welcome.js?v=6"></script>
+</body>
+
+</html>

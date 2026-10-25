@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Register | UniFit</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+
+                <img
+                    src="assets/images/Group 6.png"
+                    alt="UniFit Logo">
+
+                <span>UniFit</span>
+
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button">
+
+                Menu
+
+            </button>
+
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="products.html">
+                        Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="uniform-sets.html">
+                        Uniform Sets
+                    </a>
+                </li>
+
+                <li>
+                    <a href="events.html">
+                        Sportsfest
+                    </a>
+                </li>
+
+                <li>
+                    <a href="size-guide.html">
+                        Size Guide
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cart.html">
+
+                        Cart
+
+                        <span class="cart-count">
+                            0
+                        </span>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="login.html" class="active">
+                        Login
+                    </a>
+                </li>
+
+                <li>
+                    <a href="http://localhost:8000/admin-login.html">
+                        Admin
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         REGISTER
+    ====================================================== -->
+
+    <main class="auth-page">
+
+        <section class="auth-container register-container">
+
+
+            <!-- LEFT PANEL -->
+            <div class="auth-brand-panel">
+
+                <img
+                    src="assets/images/Group 6.png"
+                    alt="UniFit Logo"
+                    class="auth-logo">
+
+
+                <p class="eyebrow">
+                    Join UniFit
+                </p>
+
+
+                <h1>
+                    Create Your Account
+                </h1>
+
+
+                <p>
+                    Register to make ordering school uniforms
+                    and student essentials faster and easier.
+                </p>
+
+
+                <div class="register-benefits">
+
+                    <span>
+                        ✓ View your order history
+                    </span>
+
+                    <span>
+                        ✓ Save previous uniform sizes
+                    </span>
+
+                    <span>
+                        ✓ Quick reorder
+                    </span>
+
+                    <span>
+                        ✓ Receive restock updates
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FORM -->
+            <div class="auth-form-panel">
+
+                <div class="auth-heading">
+
+                    <p class="eyebrow">
+                        Student Registration
+                    </p>
+
+                    <h2>
+                        Create Account
+                    </h2>
+
+                    <p>
+                        Fill in your information below.
+                    </p>
+
+                </div>
+
+
+                <form
+                    class="auth-form"
+                    id="registerForm">
+
+
+                    <!-- NAME -->
+                    <div class="form-row">
+
+
+                        <div class="form-group">
+
+                            <label for="firstName">
+                                First Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="firstName"
+                                name="firstName"
+                                placeholder="First name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="lastName">
+                                Last Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="lastName"
+                                name="lastName"
+                                placeholder="Last name"
+                                required>
+
+                        </div>
+
+                                  <!-- STUDENT NUMBER -->
+                                  <div class="form-group">
+
+                                 <label for="studentNumber">
+                                   Student Number
+                                    </label>
+
+                                   <input
+                                    type="text"
+                                    id="studentNumber"
+                                   name="studentNumber"
+                                    placeholder="Enter your student number"
+                                   required>
+
+                                   </div>
+
+
+                         <!-- CONTACT NUMBER -->
+                                <div class="form-group">
+
+                                <label for="contactNumber">
+                                 Contact Number
+                                </label>
+
+                               <input
+                                type="tel"
+                                id="contactNumber"
+                                 name="contactNumber"
+                                 placeholder="09XXXXXXXXX"
+                                   maxlength="11"
+                                   required>
+
+                                  </div>
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+
+                        <label for="registerEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="registerEmail"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required>
+
+                    </div>
+
+
+
+                   <!-- PASSWORD -->
+<div class="form-group">
+
+    <label for="registerPassword">
+        Password
+    </label>
+
+    <div class="password-field">
+
+        <input
+            type="password"
+            id="registerPassword"
+            name="password"
+            placeholder="Create a password"
+            required>
+
+        <button
+            type="button"
+            class="password-toggle"
+            data-target="registerPassword"
+            aria-label="Show password">
+
+            <svg
+                class="eye-open"
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+
+                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"></path>
+
+                <circle
+                    cx="12"
+                    cy="12"
+                    r="3">
+                </circle>
+
+            </svg>
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- CONFIRM PASSWORD -->
+<div class="form-group">
+
+    <label for="confirmPassword">
+        Confirm Password
+    </label>
+
+    <div class="password-field">
+
+        <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            placeholder="Confirm your password"
+            required>
+
+        <button
+            type="button"
+            class="password-toggle"
+            data-target="confirmPassword"
+            aria-label="Show password">
+
+            <svg
+                class="eye-open"
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+
+                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"></path>
+
+                <circle
+                    cx="12"
+                    cy="12"
+                    r="3">
+                </circle>
+
+            </svg>
+
+        </button>
+
+    </div>
+
+</div>
+                    <!-- TERMS -->
+                    <label class="register-terms">
+
+                        <input
+                            type="checkbox"
+                            required>
+
+                        <span>
+                            I agree to the UniFit terms
+                            and privacy policy.
+                        </span>
+
+                    </label>
+
+
+
+                    <!-- BUTTON -->
+                    <button
+                        type="submit"
+                        class="auth-submit-button">
+
+                        Create Account
+
+                    </button>
+
+
+                    <p class="auth-switch">
+
+                        Already have an account?
+
+                        <a href="login.html">
+                            Login
+                        </a>
+
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <h3>UniFit</h3>
+
+                <p>
+                    Your School Essentials,
+                    One Click Away.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="products.html">Products</a>
+
+                <a href="uniform-sets.html">Uniform Sets</a>
+
+                <a href="cart.html">Cart</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 UniFit.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/app.js?v=10"></script>
+
+</body>
+
+</html>

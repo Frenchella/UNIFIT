@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script src="js/student-access.js"></script>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | UniFit</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+
+                <img
+                    src="assets/images/Group 6.png"
+                    alt="UniFit Logo">
+
+                <span>UniFit</span>
+
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button">
+
+                Menu
+
+            </button>
+
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="products.html">
+                        Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="uniform-sets.html">
+                        Uniform Sets
+                    </a>
+                </li>
+
+                <li>
+                    <a href="events.html">
+                        Sportsfest
+                    </a>
+                </li>
+
+                <li>
+                    <a href="size-guide.html">
+                        Size Guide
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cart.html">
+
+                        Cart
+
+                        <span class="cart-count">
+                            0
+                        </span>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="login.html">
+                        Login
+                    </a>
+                </li>
+
+                <li>
+                    <a href="profile.html">
+                     Profile
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         PAGE BANNER
+    ====================================================== -->
+
+    <section class="page-banner">
+
+        <p class="eyebrow">
+            Complete Your Order
+        </p>
+
+        <h1>
+            Checkout
+        </h1>
+
+        <p class="page-description">
+            Review your order and provide the
+            information needed for school pickup.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CHECKOUT
+    ====================================================== -->
+
+    <main>
+
+        <section class="section">
+
+            <div class="unifit-checkout-layout">
+
+
+                <!-- =================================================
+                     LEFT SIDE
+                ================================================== -->
+
+                <form
+                    class="checkout-form-card"
+                    id="checkoutForm">
+
+
+                    <div class="checkout-section-heading">
+
+                        <p class="eyebrow">
+                            Customer Information
+                        </p>
+
+                        <h2>
+                            Contact Details
+                        </h2>
+
+                    </div>
+
+
+
+                    <!-- FULL NAME -->
+                    <div class="form-group">
+
+                        <label for="checkoutName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="checkoutName"
+                            placeholder="Enter your full name"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+
+                        <label for="checkoutEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="checkoutEmail"
+                            placeholder="Enter your email address"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- CONTACT NUMBER -->
+                    <div class="form-group">
+
+                        <label for="checkoutPhone">
+                            Contact Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="checkoutPhone"
+                            placeholder="09XXXXXXXXX"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         PICKUP
+                    ================================================== -->
+
+                    <div class="checkout-divider"></div>
+
+
+                    <div class="checkout-section-heading">
+
+                        <p class="eyebrow">
+                            Fulfillment
+                        </p>
+
+                        <h2>
+                            Pickup Method
+                        </h2>
+
+                    </div>
+
+
+                    <label class="checkout-option selected-option">
+
+                        <input
+                            type="radio"
+                            name="fulfillment"
+                            value="School Pickup"
+                            checked>
+
+                        <div>
+
+                            <strong>
+                                School Pickup
+                            </strong>
+
+                            <p>
+                                Pick up your order at the
+                                designated school collection area.
+                            </p>
+
+                        </div>
+
+                        <span>
+                            Free
+                        </span>
+
+                    </label>
+
+
+
+                    <!-- =================================================
+     PAYMENT
+================================================== -->
+
+<div class="checkout-divider"></div>
+
+
+<div class="checkout-section-heading">
+
+    <p class="eyebrow">
+        Payment
+    </p>
+
+    <h2>
+        Pay via GCash
+    </h2>
+
+    <p class="checkout-payment-note">
+        Payment must be completed before your order
+        can be submitted for processing.
+    </p>
+
+</div>
+
+
+<div class="gcash-payment-box">
+
+
+    <!-- GCASH LOGO / LABEL -->
+    <div class="gcash-heading">
+
+        <div class="gcash-icon">
+            G
+        </div>
+
+        <div>
+
+            <strong>
+                GCash Payment
+            </strong>
+
+            <p>
+                Pay the exact total amount shown
+                in your Order Summary.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- GCASH ACCOUNT -->
+    <div class="gcash-account-details">
+
+        <div>
+
+            <span>
+                GCash Number
+            </span>
+
+            <strong>
+                09XX XXX XXXX
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                Account Name
+            </span>
+
+            <strong>
+                UniFit School Shop
+            </strong>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- QR CODE PLACEHOLDER -->
+    <div class="gcash-qr-placeholder">
+
+        <a href="assets/images/payment-qr.jpg" target="_blank" rel="noopener" aria-label="Open payment QR code at full size"><img src="assets/images/payment-qr.jpg" alt="Payment QR code" width="240" style="display:block;width:240px;max-width:100%;height:auto;border-radius:8px"></a>
+
+        <div>
+
+            <strong>
+                Scan to Pay
+            </strong>
+
+            <p>
+                Scan this QR code using your payment app. Click the image to open it at full size.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- REFERENCE NUMBER -->
+    <div class="form-group">
+
+        <label for="gcashReference">
+            GCash Reference Number
+        </label>
+
+        <input
+            type="text"
+            id="gcashReference"
+            placeholder="Enter your GCash reference number"
+            required>
+
+    </div>
+
+
+
+    <!-- PAYMENT PROOF -->
+    <div class="form-group">
+
+        <label for="gcashReceipt">
+            Upload Payment Receipt
+        </label>
+
+        <input
+            type="file"
+            id="gcashReceipt"
+            accept="image/png, image/jpeg, image/jpg"
+            required>
+
+        <p class="gcash-helper">
+            Upload a screenshot of your successful
+            GCash payment.
+        </p>
+
+    </div>
+
+
+    <!-- CONFIRMATION -->
+    <label class="gcash-confirmation">
+
+        <input
+            type="checkbox"
+            id="gcashPaidConfirmation"
+            required>
+
+        <span>
+            I confirm that I have paid the full
+            order amount through GCash.
+        </span>
+
+    </label>
+
+
+</div>
+
+
+
+                    <!-- =================================================
+                         NOTES
+                    ================================================== -->
+
+                    <div class="checkout-divider"></div>
+
+
+                    <div class="form-group">
+
+                        <label for="checkoutNotes">
+                            Order Notes
+                            <span class="optional-text">
+                                Optional
+                            </span>
+                        </label>
+
+                        <textarea
+                            id="checkoutNotes"
+                            rows="4"
+                            placeholder="Add any special notes about your order"></textarea>
+
+                    </div>
+
+
+
+                    <!-- PLACE ORDER -->
+                    <button
+                        type="submit"
+                        class="checkout-place-order"
+                        id="placeOrderButton">
+
+                        Place Order
+
+                    </button>
+
+                </form>
+
+
+
+                <!-- =================================================
+                     RIGHT SIDE
+                     ORDER SUMMARY
+                ================================================== -->
+
+                <aside class="checkout-summary-card">
+
+                    <p class="eyebrow">
+                        Your Order
+                    </p>
+
+                    <h2>
+                        Order Summary
+                    </h2>
+
+
+                    <!-- PRODUCTS -->
+                    <div
+                        class="checkout-products"
+                        id="checkoutProducts">
+
+                    </div>
+
+
+
+                    <!-- SUBTOTAL -->
+                    <div class="checkout-summary-row">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <strong id="checkoutSubtotal">
+                            ₱0.00
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- PICKUP -->
+                    <div class="checkout-summary-row">
+
+                        <span>
+                            School Pickup
+                        </span>
+
+                        <strong>
+                            Free
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- DISCOUNT -->
+                    <div class="checkout-summary-row">
+
+                        <span>
+                            Discount
+                        </span>
+
+                        <strong id="checkoutDiscount">
+                            ₱0.00
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- TOTAL -->
+                    <div class="checkout-total-row">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="checkoutTotal">
+                            ₱0.00
+                        </strong>
+
+                    </div>
+
+
+                    <a
+                        href="cart.html"
+                        class="checkout-back-cart">
+
+                        ← Back to Cart
+
+                    </a>
+
+                </aside>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SUCCESS
+            ================================================== -->
+
+            <div
+                class="checkout-success"
+                id="checkoutSuccess">
+
+                <div class="checkout-success-icon">
+                    ✓
+                </div>
+
+                <p class="eyebrow">
+                    Order Submitted
+                </p>
+
+                <h2>
+                    Thank You for Your Order!
+                </h2>
+
+                <p>
+                    Your UniFit order has been successfully
+                    submitted.
+                </p>
+
+                <div class="checkout-order-number">
+
+                    Order Number:
+
+                    <strong id="checkoutOrderNumber"></strong>
+
+                </div>
+
+
+                <a
+                    href="my-orders.html"
+                    class="btn primary-btn">
+
+                    View My Orders
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <h3>UniFit</h3>
+
+                <p>
+                    Your School Essentials,
+                    One Click Away.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="uniform-sets.html">
+                    Uniform Sets
+                </a>
+
+                <a href="size-guide.html">
+                    Size Guide
+                </a>
+
+                <a href="events.html">
+                    Sportsfest
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 UniFit.
+                Your School Essentials, One Click Away.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/app.js?v=10"></script>
+
+</body>
+
+</html>

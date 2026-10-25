@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script src="js/student-access.js"></script>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Product Details | UniFit</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+
+                <img
+                    src="assets/images/Group 6.png"
+                    alt="UniFit Logo">
+
+                <span>UniFit</span>
+
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button">
+
+                Menu
+
+            </button>
+
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="products.html" class="active">
+                        Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="uniform-sets.html">
+                        Uniform Sets
+                    </a>
+                </li>
+
+                <li>
+                    <a href="events.html">
+                        Sportsfest
+                    </a>
+                </li>
+
+                <li>
+                    <a href="size-guide.html">
+                        Size Guide
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cart.html">
+
+                        Cart
+
+                        <span
+                            class="cart-count"
+                            id="productCartCount">
+
+                            0
+
+                        </span>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="login.html">
+                        Login
+                    </a>
+                </li>
+
+                <li>
+                    <a href="http://localhost:8000/admin-login.html">
+                        Admin
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         BREADCRUMB
+    ====================================================== -->
+
+    <div class="product-breadcrumb">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <span>›</span>
+
+        <a href="products.html">
+            Products
+        </a>
+
+        <span>›</span>
+
+        <span id="breadcrumbProduct">
+            Product Details
+        </span>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         PRODUCT DETAILS
+    ====================================================== -->
+
+    <main>
+
+        <section class="product-detail-section">
+
+            <div class="product-detail-layout">
+
+
+                <!-- =================================================
+                     LEFT - PRODUCT IMAGE
+                ================================================== -->
+
+                <div class="product-detail-gallery">
+
+                    <div class="product-detail-main-image">
+
+                        <img
+                            src="assets/images/mens-pink-brown-uniform-top.png"
+                            alt="Product"
+                            id="detailProductImage">
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     RIGHT - PRODUCT INFORMATION
+                ================================================== -->
+
+                <div class="product-detail-info">
+
+
+                    <!-- CATEGORY -->
+                    <p
+                        class="eyebrow"
+                        id="detailProductCategory">
+
+                        School Uniform
+
+                    </p>
+
+
+                    <!-- PRODUCT NAME -->
+                    <h1 id="detailProductName">
+
+                        Men's School Uniform Top
+
+                    </h1>
+
+
+                    <!-- PRICE -->
+                    <p
+                        class="product-detail-price"
+                        id="detailProductPrice">
+
+                        ₱450.00
+
+                    </p>
+
+
+                    <!-- STOCK -->
+                    <div class="product-stock">
+
+                        <span class="stock-dot"></span>
+
+                        <span>
+                            In Stock
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- DESCRIPTION -->
+                    <p
+                        class="product-detail-description"
+                        id="detailProductDescription">
+
+                        A comfortable and school-appropriate
+                        uniform top designed for everyday use.
+
+                    </p>
+
+
+
+                    <!-- =================================================
+                         SIZE SELECTION
+                    ================================================== -->
+
+                    <div
+                        class="product-option-group"
+                        id="sizeSelectionGroup">
+
+                        <div class="product-option-heading">
+
+                            <label>
+                                Select Size
+                            </label>
+
+                            <a href="size-guide.html">
+                                View Size Guide
+                            </a>
+
+                        </div>
+
+
+                        <div
+                            class="product-size-options"
+                            id="productSizeOptions">
+
+                            <!-- Generated by JavaScript -->
+
+                        </div>
+
+
+                        <p
+                            class="selected-option-text"
+                            id="selectedSizeText">
+
+                            Please select a size.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         FABRIC
+                    ================================================== -->
+
+                    <div
+                        class="product-option-group"
+                        id="productFabricGroup">
+
+                        <label>
+                            Fabric & Color
+                        </label>
+
+
+                        <div class="detail-fabric-option">
+
+                            <div class="detail-fabric-image">
+
+                                <img
+                                    src="assets/images/fabric-pink.png"
+                                    alt="Selected Fabric"
+                                    id="detailFabricImage">
+
+                            </div>
+
+
+                            <div>
+
+                                <strong id="detailFabricName">
+                                    Pink
+                                </strong>
+
+                                <p id="detailFabricDescription">
+                                    Men's Uniform Top Fabric
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         QUANTITY
+                    ================================================== -->
+
+                    <div class="product-option-group">
+
+                        <label>
+                            Quantity
+                        </label>
+
+
+                        <div class="product-detail-quantity">
+
+                            <button
+                                type="button"
+                                id="detailQuantityMinus">
+
+                                −
+
+                            </button>
+
+
+                            <span id="detailQuantity">
+                                1
+                            </span>
+
+
+                            <button
+                                type="button"
+                                id="detailQuantityPlus">
+
+                                +
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         ACTION BUTTONS
+                    ================================================== -->
+
+                    <div class="product-detail-actions">
+
+                        <button
+                            type="button"
+                            class="btn primary-btn product-add-cart"
+                            id="detailAddToCart">
+
+                            Add to Cart
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="product-buy-now"
+                            id="detailBuyNow">
+
+                            Buy Now
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- MESSAGE -->
+                    <div
+                        class="product-added-message"
+                        id="productAddedMessage">
+
+                        Product added to your cart.
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         PRODUCT INFO
+                    ================================================== -->
+
+                    <div class="product-information-box">
+
+                        <div class="product-information-row">
+
+                            <span>
+                                Availability
+                            </span>
+
+                            <strong>
+                                In Stock
+                            </strong>
+
+                        </div>
+
+
+                        <div class="product-information-row">
+
+                            <span>
+                                Order Method
+                            </span>
+
+                            <strong>
+                                Online Order
+                            </strong>
+
+                        </div>
+
+
+                        <div class="product-information-row">
+
+                            <span>
+                                Fulfillment
+                            </span>
+
+                            <strong>
+                                School Pickup
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PRODUCT DETAILS / FEATURES
+        ====================================================== -->
+
+        <section class="product-extra-section">
+
+            <div class="section">
+
+                <div class="product-extra-grid">
+
+
+                    <article class="product-extra-card">
+
+                        <span>
+                            01
+                        </span>
+
+                        <h3>
+                            School Approved
+                        </h3>
+
+                        <p>
+                            Designed according to the required
+                            school uniform specifications.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="product-extra-card">
+
+                        <span>
+                            02
+                        </span>
+
+                        <h3>
+                            Size Selection
+                        </h3>
+
+                        <p>
+                            Select your preferred available size
+                            before adding the item to your cart.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="product-extra-card">
+
+                        <span>
+                            03
+                        </span>
+
+                        <h3>
+                            Easy Ordering
+                        </h3>
+
+                        <p>
+                            Order your school essentials
+                            conveniently through UniFit.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <h3>
+                    UniFit
+                </h3>
+
+                <p>
+                    Your School Essentials,
+                    One Click Away.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="uniform-sets.html">
+                    Uniform Sets
+                </a>
+
+                <a href="size-guide.html">
+                    Size Guide
+                </a>
+
+                <a href="events.html">
+                    Sportsfest
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 UniFit.
+                Your School Essentials, One Click Away.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/app.js?v=9"></script>
+
+</body>
+
+</html>

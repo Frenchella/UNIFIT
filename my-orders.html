@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script src="js/student-access.js"></script>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Orders | UniFit</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <!-- LOGO -->
+            <a href="index.html" class="logo">
+
+                <img
+                    src="assets/images/Group 6.png"
+                    alt="UniFit Logo">
+
+                <span>UniFit</span>
+
+            </a>
+
+
+            <!-- MOBILE MENU -->
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button">
+
+                Menu
+
+            </button>
+
+
+            <!-- NAVIGATION -->
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="products.html">
+                        Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="uniform-sets.html">
+                        Uniform Sets
+                    </a>
+                </li>
+
+                <li>
+                    <a href="events.html">
+                        Sportsfest
+                    </a>
+                </li>
+
+                <li>
+                    <a href="size-guide.html">
+                        Size Guide
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cart.html">
+
+                        Cart
+
+                        <span class="cart-count">
+                            0
+                        </span>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="login.html">
+                        Login
+                    </a>
+                </li>
+
+                <li>
+                    <a href="http://localhost:8000/admin-login.html">
+                        Admin
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         PAGE BANNER
+    ====================================================== -->
+
+    <section class="page-banner">
+
+        <p class="eyebrow">
+            UniFit Account
+        </p>
+
+        <h1>
+            My Orders
+        </h1>
+
+        <p class="page-description">
+
+            View your recent purchases,
+            track your order status,
+            and quickly reorder your school essentials.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main>
+
+        <section class="section">
+
+
+            <!-- =================================================
+                 HEADER + FILTER
+            ================================================== -->
+
+            <div class="orders-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        Order History
+                    </p>
+
+                    <h2>
+                        Your Orders
+                    </h2>
+
+                </div>
+
+
+                <div class="order-filters">
+
+                    <button
+                        type="button"
+                        class="order-filter active"
+                        data-filter="all">
+
+                        All
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="order-filter"
+                        data-filter="pending">
+
+                        Pending
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="order-filter"
+                        data-filter="preparing">
+
+                        Preparing
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="order-filter"
+                        data-filter="ready">
+
+                        Ready
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="order-filter"
+                        data-filter="completed">
+
+                        Completed
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ORDERS LIST
+            ================================================== -->
+
+            <div class="orders-list">
+
+
+                <!-- =================================================
+                     ORDER 1
+                     PENDING
+                ================================================== -->
+
+                <article
+                    class="order-card"
+                    data-status="pending">
+
+                    <!-- ORDER HEADER -->
+                    <div class="order-card-header">
+
+                        <div>
+
+                            <p class="order-label">
+                                Order Number
+                            </p>
+
+                            <h3>
+                                #UF-2026-001
+                            </h3>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="order-label">
+                                Order Date
+                            </p>
+
+                            <strong>
+                                September 24, 2026
+                            </strong>
+
+                        </div>
+
+
+                        <span class="order-status status-pending">
+                            Pending
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- ORDER ITEMS -->
+                    <div class="order-items">
+
+
+                        <!-- ITEM -->
+                        <div class="order-item">
+
+                            <div class="order-item-image">
+
+                                <img
+                                    src="assets/images/mens-pink-brown-uniform-top.png"
+                                    alt="Men's School Uniform Top">
+
+                            </div>
+
+
+                            <div class="order-item-info">
+
+                                <h4>
+                                    Men's School Uniform Top
+                                </h4>
+
+                                <p>
+                                    Size: M
+                                </p>
+
+                                <p>
+                                    Quantity: 1
+                                </p>
+
+                            </div>
+
+
+                            <strong class="order-item-price">
+                                ₱450.00
+                            </strong>
+
+                        </div>
+
+
+
+                        <!-- ITEM -->
+                        <div class="order-item">
+
+                            <div class="order-item-image">
+
+                                <img
+                                    src="assets/images/dark-brown-white-buckle-belt.png"
+                                    alt="School Uniform Belt">
+
+                            </div>
+
+
+                            <div class="order-item-info">
+
+                                <h4>
+                                    School Uniform Belt
+                                </h4>
+
+                                <p>
+                                    Adjustable
+                                </p>
+
+                                <p>
+                                    Quantity: 1
+                                </p>
+
+                            </div>
+
+
+                            <strong class="order-item-price">
+                                ₱150.00
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ORDER FOOTER -->
+                    <div class="order-card-footer">
+
+                        <div class="order-total">
+
+                            <span>
+                                Order Total
+                            </span>
+
+                            <strong>
+                                ₱600.00
+                            </strong>
+
+                        </div>
+
+
+                        <div class="order-actions">
+
+                            <button
+                                type="button"
+                                class="order-secondary-button">
+
+                                View Details
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     ORDER 2
+                     PREPARING
+                ================================================== -->
+
+                <article
+                    class="order-card"
+                    data-status="preparing">
+
+                    <div class="order-card-header">
+
+                        <div>
+
+                            <p class="order-label">
+                                Order Number
+                            </p>
+
+                            <h3>
+                                #UF-2026-002
+                            </h3>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="order-label">
+                                Order Date
+                            </p>
+
+                            <strong>
+                                September 20, 2026
+                            </strong>
+
+                        </div>
+
+
+                        <span class="order-status status-preparing">
+                            Preparing
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="order-items">
+
+
+                        <div class="order-item">
+
+                            <div class="order-item-image">
+
+                                <img
+                                    src="assets/images/pe-top-yellow-white.png"
+                                    alt="PE Uniform Top">
+
+                            </div>
+
+
+                            <div class="order-item-info">
+
+                                <h4>
+                                    PE Uniform Top
+                                </h4>
+
+                                <p>
+                                    Size: L
+                                </p>
+
+                                <p>
+                                    Quantity: 1
+                                </p>
+
+                            </div>
+
+
+                            <strong class="order-item-price">
+                                ₱350.00
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="order-item">
+
+                            <div class="order-item-image">
+
+                                <img
+                                    src="assets/images/pe-jogger-pants-black-yellow.png"
+                                    alt="PE Jogger Pants">
+
+                            </div>
+
+
+                            <div class="order-item-info">
+
+                                <h4>
+                                    PE Jogger Pants
+                                </h4>
+
+                                <p>
+                                    Size: L
+                                </p>
+
+                                <p>
+                                    Quantity: 1
+                                </p>
+
+                            </div>
+
+
+                            <strong class="order-item-price">
+                                ₱400.00
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="order-card-footer">
+
+                        <div class="order-total">
+
+                            <span>
+                                Order Total
+                            </span>
+
+                            <strong>
+                                ₱750.00
+                            </strong>
+
+                        </div>
+
+
+                        <div class="order-actions">
+
+                            <button
+                                type="button"
+                                class="order-secondary-button">
+
+                                View Details
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     ORDER 3
+                     READY FOR PICKUP
+                ================================================== -->
+
+                <article
+                    class="order-card"
+                    data-status="ready">
+
+                    <div class="order-card-header">
+
+                        <div>
+
+                            <p class="order-label">
+                                Order Number
+                            </p>
+
+                            <h3>
+                                #UF-2026-003
+                            </h3>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="order-label">
+                                Order Date
+                            </p>
+
+                            <strong>
+                                September 15, 2026
+                            </strong>
+
+                        </div>
+
+
+                        <span class="order-status status-ready">
+                            Ready for Pickup
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="order-items">
+
+
+                        <div class="order-item">
+
+                            <div class="order-item-image">
+
+                                <img
+                                    src="assets/images/escr-id-lace-red-holder.png"
+                                    alt="School ID Lace">
+
+                            </div>
+
+
+                            <div class="order-item-info">
+
+                                <h4>
+                                    School ID Lace
+                                </h4>
+
+                                <p>
+                                    One Size
+                                </p>
+
+                                <p>
+                                    Quantity: 2
+                                </p>
+
+                            </div>
+
+
+                            <strong class="order-item-price">
+                                ₱200.00
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="order-card-footer">
+
+                        <div class="order-total">
+
+                            <span>
+                                Order Total
+                            </span>
+
+                            <strong>
+                                ₱200.00
+                            </strong>
+
+                        </div>
+
+
+                        <div class="order-actions">
+
+                            <button
+                                type="button"
+                                class="order-secondary-button">
+
+                                View Details
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     ORDER 4
+                     COMPLETED
+                ================================================== -->
+
+                <article
+                    class="order-card"
+                    data-status="completed">
+
+                    <div class="order-card-header">
+
+                        <div>
+
+                            <p class="order-label">
+                                Order Number
+                            </p>
+
+                            <h3>
+                                #UF-2026-004
+                            </h3>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="order-label">
+                                Order Date
+                            </p>
+
+                            <strong>
+                                August 28, 2026
+                            </strong>
+
+                        </div>
+
+
+                        <span class="order-status status-completed">
+                            Completed
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="order-items">
+
+
+                        <div class="order-item">
+
+                            <div class="order-item-image">
+
+                                <img
+                                    src="assets/images/escr-stacked-patches.png"
+                                    alt="School Uniform Patch">
+
+                            </div>
+
+
+                            <div class="order-item-info">
+
+                                <h4>
+                                    School Uniform Patch
+                                </h4>
+
+                                <p>
+                                    Standard Size
+                                </p>
+
+                                <p>
+                                    Quantity: 2
+                                </p>
+
+                            </div>
+
+
+                            <strong class="order-item-price">
+                                ₱100.00
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="order-card-footer">
+
+                        <div class="order-total">
+
+                            <span>
+                                Order Total
+                            </span>
+
+                            <strong>
+                                ₱100.00
+                            </strong>
+
+                        </div>
+
+
+                        <div class="order-actions">
+
+                            <button
+                                type="button"
+                                class="order-secondary-button">
+
+                                View Details
+
+                            </button>
+
+
+                            <a
+                                href="products.html"
+                                class="order-primary-button">
+
+                                Order Again
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 NO ORDERS FOUND
+            ================================================== -->
+
+            <div
+                class="orders-empty"
+                id="ordersEmpty">
+
+                <h3>
+                    No orders found.
+                </h3>
+
+                <p>
+                    You don't have any orders
+                    with this status yet.
+                </p>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <h3>
+                    UniFit
+                </h3>
+
+                <p>
+                    Your School Essentials,
+                    One Click Away.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="uniform-sets.html">
+                    Uniform Sets
+                </a>
+
+                <a href="size-guide.html">
+                    Size Guide
+                </a>
+
+                <a href="events.html">
+                    Sportsfest
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 UniFit.
+                Your School Essentials, One Click Away.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/app.js?v=9"></script>
+
+</body>
+
+</html>

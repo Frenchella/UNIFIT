@@ -1,192 +1,213 @@
- <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+
+<html>
 
 <head>
-<script src="js/student-access.js"></script>
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>My Profile | UniFit</title>
-
-    <link rel="stylesheet" href="css/style.css">
+    <title>My Personal Profile</title>
 </head>
- 
- </nav>
 
-    </header>
+<body bgcolor="darkblue" text="white">
 
-
-    <!-- PROFILE PAGE -->
-    <main>
-
-        <section class="section">
-
-            <div class="profile-container">
-
-                <div class="profile-header">
-
-                    <div class="profile-avatar">
-                        U
-                    </div>
-
-                    <div>
-
-                        <p class="eyebrow">
-                            My Account
-                        </p>
-
-                        <h1 id="profileFullName">
-                            Student Profile
-                        </h1>
-
-                        <p>
-                            Manage your UniFit account information.
-                        </p>
-
-                    </div>
-
-                </div>
+    <hr width="90%" size="2" color="gray">
 
 
-                <!-- PROFILE INFORMATION -->
-                <div class="profile-card">
-
-                    <h2>
-                        Personal Information
-                    </h2>
-
-
-                    <div class="profile-info-grid">
-
-                        <div class="profile-info-item">
-
-                            <span>
-                                Full Name
-                            </span>
-
-                            <strong id="profileName">
-                                Not Available
-                            </strong>
-
-                        </div>
+    <p align="center">
+        <font color="yellow" face="Times New Roman" size="7">
+            MY PERSONAL PROFILE
+        </font>
+    </p>
 
 
-                        <div class="profile-info-item">
-
-                            <span>
-                                Student Number
-                            </span>
-
-                            <strong id="profileStudentNumber">
-                                Not Available
-                            </strong>
-
-                        </div>
+    <hr width="70%" size="2" color="gray">
 
 
-                        <div class="profile-info-item">
-
-                            <span>
-                                Contact Number
-                            </span>
-
-                            <strong id="profileContact">
-                                Not Available
-                            </strong>
-
-                        </div>
+    <p align="center">
+        <font color="cyan" face="Lucida Console" size="3">
+            LEARN MORE ABOUT ME
+        </font>
+    </p>
 
 
-                        <div class="profile-info-item">
-
-                            <span>
-                                Email Address
-                            </span>
-
-                            <strong id="profileEmail">
-                                Not Available
-                            </strong>
-
-                        </div>
-
-                    </div>
+    <hr width="50%" size="2" color="gray">
 
 
-                    <div class="profile-actions">
-
-                        <a
-                            href="my-orders.html"
-                            class="btn primary-btn">
-
-                            My Orders
-
-                        </a>
-
-                        <button
-                            type="button"
-                            class="btn secondary-btn"
-                            id="logoutButton">
-
-                            Logout
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
+    <p>
+        <font color="orange" face="Arial" size="5">
+            MY HOBBIES
+        </font>
+    </p>
 
 
-    <script src="js/app.js?v=10"></script>
+    <p>
+        <font size="4">
+            These are some of the activities that I enjoy doing during my free time.
+        </font>
+    </p>
 
-    <script>
-        (async function loadStudentProfile() {
-            const showProfile = (user) => {
-                if (!user) return;
-                const firstName = String(user.firstName || '').trim();
-                const lastName = String(user.lastName || '').trim();
-                const fullName = [firstName, lastName].filter(Boolean).join(' ');
-                const values = {
-                    profileFullName: fullName || 'Student Profile',
-                    profileName: fullName,
-                    profileStudentNumber: user.studentNumber,
-                    profileContact: user.contactNumber,
-                    profileEmail: user.email
-                };
-                Object.entries(values).forEach(([id, value]) => {
-                    const element = document.getElementById(id);
-                    if (element && String(value || '').trim()) element.textContent = String(value).trim();
-                });
-            };
 
-            try {
-                const response = await fetch('/api/student-session', { cache: 'no-store' });
-                if (response.ok) {
-                    const data = await response.json();
-                    if (data.user) {
-                        localStorage.setItem('unifitCurrentUser', JSON.stringify(data.user));
-                        showProfile(data.user);
-                        return;
-                    }
-                }
-            } catch (error) {
-                // Use the last locally saved profile if the server is temporarily unavailable.
-            }
+    <ol>
+        <font size="4">
 
-            try {
-                showProfile(JSON.parse(localStorage.getItem('unifitCurrentUser') || 'null'));
-            } catch (error) {
-                // Leave the page's default placeholders if local profile data is invalid.
-            }
-        })();
-    </script>
+            <li>
+                <font color="yellow" face="Arial">
+                    Playing Badminton
+                </font>
+                <br>
+                I enjoy playing badminton because it keeps me active.
+            </li>
+
+            <br>
+
+            <li>
+                <font color="yellow" face="Arial">
+                    Watching Movies
+                </font>
+                <br>
+                Watching movies helps me relax after studying.
+            </li>
+
+            <br>
+
+            <li>
+                <font color="yellow" face="Arial">
+                    Playing Online Games
+                </font>
+                <br>
+                I enjoy playing online games with my friends.
+            </li>
+
+            <br>
+
+            <li>
+                <font color="yellow" face="Arial">
+                    Listening to Music
+                </font>
+                <br>
+                Music helps me concentrate and relax.
+            </li>
+
+            <br>
+
+            <li>
+                <font color="yellow" face="Arial">
+                    Traveling
+                </font>
+                <br>
+                I enjoy visiting new places with my family.
+            </li>
+
+        </font>
+    </ol>
+
+
+    <hr width="80%" size="2" color="gray">
+
+
+    <p align="center">
+        <font color="lime" face="Arial" size="5">
+            MY FAVORITE THINGS
+        </font>
+    </p>
+
+
+    <ul>
+        <font size="4">
+
+            <li>Pizza</li>
+            <li>Fried Chicken</li>
+            <li>Chocolate</li>
+            <li>Basketball</li>
+            <li>Action Movies</li>
+            <li>Pop Music</li>
+            <li>Dogs</li>
+            <li>The Beach</li>
+
+        </font>
+    </ul>
+
+
+    <hr width="60%" size="2" color="gray">
+
+
+    <p align="right">
+        <font color="pink" face="Arial" size="5">
+            MY GOALS
+        </font>
+    </p>
+
+
+    <p>
+        <font color="yellow" face="Arial" size="4">
+            MY SHORT-TERM GOAL
+        </font>
+    </p>
+
+
+    <p>
+        <font size="4">
+            My short-term goal is to successfully complete my studies
+            and improve my programming skills.
+        </font>
+    </p>
+
+
+    <p align="center">
+        <font color="yellow" face="Arial" size="4">
+            MY LONG-TERM GOAL
+        </font>
+    </p>
+
+
+    <p align="center">
+        <font size="4">
+            My long-term goal is to have a successful career
+            in the field of information technology.
+        </font>
+    </p>
+
+
+    <p align="right">
+        <font color="yellow" face="Arial" size="4">
+            MY DREAM CAREER
+        </font>
+    </p>
+
+
+    <p align="right">
+        <font size="4">
+            My dream career is to become a professional
+            web developer and software developer.
+        </font>
+    </p>
+
+
+    <hr width="90%" size="2" color="gray">
+
+
+    <p align="center">
+
+        <a href="favorites.html">
+            <font color="blue" face="Arial" size="5">
+                <u>GO TO MY FAVORITES</u>
+            </font>
+        </a>
+
+    </p>
+
+
+    <p align="center">
+
+        <a href="index.html">
+            <font color="blue" face="Arial" size="5">
+                <u>BACK TO HOME</u>
+            </font>
+        </a>
+
+    </p>
+
+
+    <hr width="90%" size="2" color="gray">
+
 </body>
 
 </html>
